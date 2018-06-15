@@ -1,0 +1,28 @@
+Using curl -v
+  - Requesting invalid urls
+      - Missing .html, .jpg, .png
+      - Having no content type
+  - Requesting just the '/' character to turn into /index.html
+  - Requesting a path that doesn't exist
+
+Using telnet
+  - Sending malformed requests
+      - Missing GET header for method
+      - Missing HTTP/1.1 header for version
+      - Improper key value pairs
+      - Having no Host key value pair
+      - Having Host key value pair not be the first key value pair
+
+Using UnitTest.c
+  - To compile:
+      g++ UnitTest.c MsgEncodingText.c
+  - To run: 
+      ./a.out
+  - Checked if Encoding 
+      - Set values of HTTPResponse and checked buffer if correct
+  - Checked if Decoding works
+      - Set a message to be decoded and checked if HTTPRequest fields are correct
+      - Checked case where key was just spaces for key value pair
+      - Checked case where value was all spaces for key value pair
+      - Checked case where value had spaces for key value pair
+      - Checked case where key had spaces in the field along with text
